@@ -1,0 +1,9 @@
+{
+  "name": "Alexa-Hello-World",
+  "version": "1.0.0",
+  "description": "corona aid skill",
+  "main": "index.js",
+  "author": "jeelani asif",
+  "dependencies": {
+    "alexa-sdk": "^1.0.6"
+  }

@@ -1,0 +1,74 @@
+var Alexa = require('alexa-sdk');
+
+exports.handler = function(event, context, callback) {
+    var alexa = Alexa.handler(event, context);
+
+    alexa.registerHandlers(handlers);
+    alexa.execute();
+};
+
+var handlers = {
+    'LaunchRequest': function() { //Executes when a new session is launched
+        this.emit('LaunchIntent');
+    },
+
+    'LaunchIntent': function() {
+        this.emit(':ask', "Welcome!how can i help you?");
+    },
+    'CoronaidIntent': function() {
+        this.emit(':ask', "Corona viruses are a large family of viruses which may cause illness in animals or humans.  In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most recently discovered coronavirus causes coronavirus disease COVID-19");
+    },
+    'NovelIntent': function() {
+        this.emit(':ask', "A novel coronavirus (CoV) is a new strain of coronavirus that has not been previously identified in humans.");
+    },
+    'TransmitIntent': function() {
+        this.emit(':ask', "People can catch COVID-19 from others who have the virus. The disease can spread from person to person through small droplets from the nose or mouth which are spread when a person with COVID-19 coughs or exhales. These droplets land on objects and surfaces around the person. Other people then catch COVID-19 by touching these objects or surfaces, then touching their eyes, nose or mouth. People can also catch COVID-19 if they breathe in droplets from a person with COVID-19 who coughs out or exhales droplets. This is why it is important to stay more than 1 meter (3 feet) away from a person who is sick.");
+    },
+    'CovidIntent': function() {
+        this.emit(':ask', "COVID-19 is the infectious disease caused by the most recently discovered corona virus. This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019.");
+    },
+    'SymptomsIntent': function() {
+        this.emit(':ask', "The most common symptoms of COVID-19 are fever, tiredness, and dry cough. Some patients may have aches and pains, nasal congestion, runny nose, sore throat or diarrhea. These symptoms are usually mild and begin gradually. Some people become infected but don’t develop any symptoms and don't feel unwell. Most people (about 80%) recover from the disease without needing special treatment. Around 1 out of every 6 people who gets COVID-19 becomes seriously ill and develops difficulty breathing. Older people, and those with underlying medical problems like high blood pressure, heart problems or diabetes, are more likely to develop serious illness. People with fever, cough and difficulty breathing should seek medical attention");
+    },
+    'PrecautionIntent':function() {
+        this.emit(':ask',"Regularly and thoroughly clean your hands with an alcoholbased hand rub or wash them with soap and water. Why? Washing your hands with soap and water or using alcohol-based hand rub kills viruses that may be on your hands.Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing. Why? When someone coughs or sneezes they spray small liquid droplets from their nose or mouth which may contain virus. If you are too close, you can breathe in the droplets, including the COVID-19 virus if the person coughing has the disease.Avoid touching eyes, nose and mouth. Why? Hands touch many surfaces and can pick up viruses. Once contaminated, hands can transfer the virus to your eyes, nose or mouth. From there, the virus can enter your body and can make you sick.");
+    },
+        'AMAZON.HelpIntent': function () {
+    this.emit(':ask',"this skill is developed to tell you about corona virus and its related general queries");
+        },
+    'SafetyIntent': function(){
+        this.emit(':ask', "For most people in most locations the risk of catching COVID-19 is still low. However, there are now places around the world (cities or areas) where the disease is spreading. For people living in, or visiting, these areas the risk of catching COVID-19 is higher. Governments and health authorities are taking vigorous action every time a new case of COVID-19 is identified. Be sure to comply with any local restrictions on travel, movement or large gatherings. Cooperating with disease control efforts will reduce your risk of catching or spreading COVID-19");
+    },
+    'WorryIntent': function() {
+        this.emit(':ask', "Illness due to COVID-19 infection is generally mild, especially for children and young adults. However, it can cause serious illness: about 1 in every 5 people who catch it need hospital care. It is therefore quite normal for people to worry about how the COVID-19 outbreak will affect them and their loved ones");
+    },
+    'VaccineIntent': function() {
+        this.emit(':ask', "While some western, traditional or home remedies may provide comfort and alleviate symptoms of COVID-19, there is no evidence that current medicine can prevent or cure the disease. We does not recommend self-medication with any medicines, including antibiotics, as a prevention or cure for COVID-19. However, there are several ongoing clinical trials that include both western and traditional medicines. We will continue to provide updated information as soon as clinical findings are available");
+    },
+    'PetIntent': function() {
+        this.emit(':ask', "While there has been one instance of a dog being infected in Hong Kong, to date, there is no evidence that a dog, cat or any pet can transmit COVID-19. COVID-19 is mainly spread through droplets produced when an infected person coughs, sneezes, or speaks. To protect yourself, clean your hands frequently and thoroughly.");
+    },
+    
+    'SurviveIntent': function() {
+        this.emit(':ask', "It is not certain how long the virus that causes COVID-19 survives on surfaces, but it seems to behave like other corona viruses. Studies suggest that corona viruses (including preliminary information on the COVID-19 virus) may persist on surfaces for a few hours or up to several days. This may vary under different conditions (e.g. type of surface, temperature or humidity of the environment.If you think a surface may be infected, clean it with simple disinfectant to kill the virus and protect yourself and others.");
+    },
+
+     'AMAZON.CancelIntent': function () {
+    this.emit('SessionEndRequest');
+
+},
+
+'AMAZON.StopIntent': function () {
+    this.emit('SessionEndRequest');
+},
+'SessionEndRequest': function() {
+    const speech_output = 'Goodbye and take care!';
+
+    this.emit(':tell', speech_output);
+    
+},
+'Unhandled': function () {
+     const speech_output = 'Goodbye and take care!';
+     this.emit(':tell', speech_output);
+},
+};

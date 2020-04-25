@@ -1,0 +1,135 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "corona aid",
+            "modelConfiguration": {
+                "fallbackIntentSensitivity": {
+                    "level": "LOW"
+                }
+            },
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "CoronaidIntent",
+                    "slots": [],
+                    "samples": [
+                        "what is corona virus"
+                    ]
+                },
+                {
+                    "name": "NovelIntent",
+                    "slots": [],
+                    "samples": [
+                        "what is novel in corona virus",
+                        "what does novel corona virus mean"
+                    ]
+                },
+                {
+                    "name": "CovidIntent",
+                    "slots": [],
+                    "samples": [
+                        "what does covid ninteen mean"
+                    ]
+                },
+                {
+                    "name": "SymptomsIntent",
+                    "slots": [],
+                    "samples": [
+                        "how can i tell if i have corona virus",
+                        "what are the symptoms of corona virus"
+                    ]
+                },
+                {
+                    "name": "PrecautionIntent",
+                    "slots": [],
+                    "samples": [
+                        "how can i prevent corona virus",
+                        "precautions for corona virus",
+                        "what are the precautionary measures taken to prevent corona virus"
+                    ]
+                },
+                {
+                    "name": "SafetyIntent",
+                    "slots": [],
+                    "samples": [
+                        "how fast is corona virus spreading"
+                    ]
+                },
+                {
+                    "name": "WorryIntent",
+                    "slots": [],
+                    "samples": [
+                        "should i be worried about corona virus"
+                    ]
+                },
+                {
+                    "name": "VaccineIntent",
+                    "slots": [],
+                    "samples": [
+                        "is there any medication available for corona virus",
+                        "is there any treatment available for corona virus"
+                    ]
+                },
+                {
+                    "name": "PetIntent",
+                    "slots": [],
+                    "samples": [
+                        "can it spread from animals",
+                        "can it transmit from animals"
+                    ]
+                },
+                {
+                    "name": "SurviveIntent",
+                    "slots": [],
+                    "samples": [
+                        "for how long it survives on surfaces"
+                    ]
+                },
+                {
+                    "name": "TransmitIntent",
+                    "slots": [],
+                    "samples": [
+                        "how can it transmit",
+                        "how can it spread"
+                    ]
+                },
+                {
+                    "name": "IndiaIntent",
+                    "slots": [],
+                    "samples": [
+                        "what is the current death count in india due to corona virus"
+                    ]
+                },
+                {
+                    "name": "SpainIntent",
+                    "slots": [],
+                    "samples": [
+                        "what is the current death count in spain due to corona virus"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
